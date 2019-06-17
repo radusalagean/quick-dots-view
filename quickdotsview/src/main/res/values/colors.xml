@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="quick_dots_view_default_selected_dot_color">#FFFF0000</color>
+    <color name="quick_dots_view_default_unselected_dot_color">#65000000</color>
+</resources>
