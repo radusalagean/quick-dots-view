@@ -2,7 +2,7 @@
 
 # QuickDotsView
 
-Android library that enables users to include circular dot inticators in their projects, with built-in linking support for `ViewPager`.
+Android library that enables users to include configurable dot indicators in their projects, with built-in linking support for `ViewPager`.
 
 <img src="misc/screencap.gif" width="360" height="640" />
 
