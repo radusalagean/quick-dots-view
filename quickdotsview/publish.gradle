@@ -41,8 +41,8 @@ artifacts {
 }
 
 bintray {
-    user = project.property('bintrayUsername')
-    key = project.property('bintrayApiKey')
+    user = project.hasProperty('bintrayUsername') ? project.property('bintrayUsername') : ''
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : ''
     publications = ['Production']
     configurations = ['archives']
     // Default: false. Whether to run this as dry-run, without deploying
