@@ -31,6 +31,15 @@ publishing {
     }
 }
 
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+artifacts {
+    archives sourcesJar
+}
+
 bintray {
     user = project.property('bintrayUsername')
     key = project.property('bintrayApiKey')
