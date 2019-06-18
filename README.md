@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/radusalagean/quick-dots-view.svg?branch=master)](https://travis-ci.org/radusalagean/quick-dots-view)
+![Bintray](https://img.shields.io/bintray/v/radusalagean/android-libs/QuickDotsView.svg)
 
 # QuickDotsView
 
@@ -8,7 +9,12 @@ Android library that enables users to include configurable dot indicators in the
 
 ## Usage
 
-// TODO gradle implementation
+Include the library in your module-level `build.gradle` file:
+```
+dependencies {
+        implementation 'com.radusalagean:quickdotsview:1.0.0'
+}
+```
 
 Define the view in XML:
 ```xml
