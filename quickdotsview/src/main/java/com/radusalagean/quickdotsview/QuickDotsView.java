@@ -4,15 +4,14 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.support.annotation.ColorInt;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.content.res.ResourcesCompat;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.View;
-
-import androidx.annotation.ColorInt;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.content.res.ResourcesCompat;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
 /**
  * A configurable view that displays a number of dots (represented by {@link #count}) and a selected
@@ -80,7 +79,7 @@ public class QuickDotsView extends View {
         public void onAdapterChanged(@NonNull ViewPager viewPager,
                                      @Nullable PagerAdapter oldAdapter,
                                      @Nullable PagerAdapter newAdapter) {
-            setUpPagerAdapter(newAdapter);
+            setUpPagerAdapter(newAdapter, viewPager.getCurrentItem());
         }
     };
 
@@ -148,7 +147,7 @@ public class QuickDotsView extends View {
      * @param viewPager The view pager that should be linked
      */
     public void linkViewPager(@NonNull ViewPager viewPager) {
-        setUpPagerAdapter(viewPager.getAdapter());
+        setUpPagerAdapter(viewPager.getAdapter(), viewPager.getCurrentItem());
         viewPager.addOnPageChangeListener(onPageChangeListener);
         viewPager.addOnAdapterChangeListener(onAdapterChangeListener);
     }
@@ -163,9 +162,9 @@ public class QuickDotsView extends View {
         viewPager.removeOnAdapterChangeListener(onAdapterChangeListener);
     }
 
-    private void setUpPagerAdapter(@NonNull PagerAdapter pagerAdapter) {
+    private void setUpPagerAdapter(@NonNull PagerAdapter pagerAdapter, int currentDot) {
         setCount(pagerAdapter.getCount());
-        setCurrentDot(0);
+        setCurrentDot(currentDot);
     }
 
     private void assertSpecs() {

@@ -1,11 +1,10 @@
 package com.radusalagean.quickdotsviewsample;
 
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
-
-public class PagerAdapter extends androidx.viewpager.widget.PagerAdapter {
+public class PagerAdapter extends android.support.v4.view.PagerAdapter {
 
     private int pageCount;
 
