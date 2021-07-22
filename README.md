@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/radusalagean/quick-dots-view.svg?branch=master)](https://travis-ci.org/radusalagean/quick-dots-view)
-![Bintray](https://img.shields.io/bintray/v/radusalagean/android-libs/QuickDotsView.svg)
+![Version](https://img.shields.io/github/v/release/radusalagean/quick-dots-view)
 
 # QuickDotsView
 
@@ -45,8 +44,8 @@ The sample app included in the repo showcases an example of such an implementati
 | Attribute | Description | Default value |
 | --- | --- | --- |
 | `count` | The total number of dots to be displayed (value must be equal or higher than 1) | `1` |
-| `selectedDotColor` | Color to be used for the drawing the selected dot | ![#FFFF0000](https://placehold.it/15/FF0000/000000?text=+) `#FFFF0000` |
-| `unselectedDotColor` | Color to be used for the drawing the unselected dot | ![#65000000](https://placehold.it/15/979797/000000?text=+) `#65000000` |
+| `selectedDotColor` | Color to be used for the drawing the selected dot | `#FFFF0000` |
+| `unselectedDotColor` | Color to be used for the drawing the unselected dot | `#65000000` |
 | `dotRadius` | The radius size of the dot | `8dp` |
 | `dotSeparation` | The distance between dots | `4dp` |
 | `currentDot` | The 0-based position of the currently selected dot | `0` |
