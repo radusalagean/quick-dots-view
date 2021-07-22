@@ -10,8 +10,12 @@ Android library that enables users to include configurable dot indicators in the
 
 Include the library in your module-level `build.gradle` file:
 ```
+repositories {
+        mavenCentral()
+}
+
 dependencies {
-        implementation 'com.radusalagean:quickdotsview:1.0.0'
+        implementation 'com.radusalagean:quickdotsview:1.0.1'
 }
 ```
 
